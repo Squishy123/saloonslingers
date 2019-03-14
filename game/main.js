@@ -1,8 +1,24 @@
-let map = new World(document.querySelector("#canvas"), 500, 500);
-map.update();
+let conf = {
+    type: Phaser.AUTO,
+    width: 800, 
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
 
-let player = new GameObject(5, { x: 7, y: 3 });
-player.update = () => {
-    console.log("I am in the world");
+let game = new Phaser.Game(conf);
+
+function preload() {
+
 }
-map.gameObjects.push(player);
+
+function create() {
+
+}
+
+function update() {
+
+}

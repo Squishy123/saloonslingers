@@ -1,0 +1,27 @@
+{
+  "name": "saloonslingers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Squishy123/saloonslingers.git",
+  "author": "Squishy123 <christian.gnaw@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^2.0.1"
+  },
+  "scripts": {
+    "devClient": "webpack-dev-server --mode development --no-inline",
+    "devServer": "node src/server.js ",
+    "dev": "concurrently \"yarn run devServer\" \"yarn run devClient\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
