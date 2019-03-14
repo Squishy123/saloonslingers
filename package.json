@@ -6,7 +6,7 @@
   "author": "Squishy123 <christian.gnaw@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^2.0.1"
+    "restify": "^8.1.0"
   },
   "scripts": {
     "devClient": "webpack-dev-server --mode development --no-inline",

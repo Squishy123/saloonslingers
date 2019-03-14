@@ -1,15 +1,15 @@
-const fastify = require('fastify')({
-    logger: true
-});
+const path = require('path');
 
-fastify.get('/static', (req, res) => {
-    res.send({message: "Hello World Fastify!"});
-});
+const restify = require('restify');
 
-fastify.listen(8000, (err, addr) => {
-    if(err)
-        throw err;
-        fastify.log.info(`Server listening on ${addr}`);
+let server = restify.createServer();
+
+server.get('/static/*', restify.plugins.serveStatic({
+    directory: path.join(__dirname, '../')
+}));
+
+server.listen(8000, () => {
+        console.log(`Server listening on ${server.name}, ${server.url}`);
 });
 
 
