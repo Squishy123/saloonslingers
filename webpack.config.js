@@ -8,7 +8,13 @@ const htmlWebpack = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-    entry: path.join(__dirname, "/game/main.js"),
+    entry: {
+        main: path.join(__dirname, "/game/")
+    },
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
     target: 'node',
     externals: [nodeExternals()],
     module: {
